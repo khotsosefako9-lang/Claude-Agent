@@ -1,0 +1,27 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+!config/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials.json
+.netrc
+
+# Personal / machine-local Claude config
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/agent-memory-local/
+.claude/worktrees/
+
+# Python / tooling
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+node_modules/
+.DS_Store
