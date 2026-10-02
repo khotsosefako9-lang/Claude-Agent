@@ -46,6 +46,8 @@ ASK_RULES = [
 ]
 ASK_RULES = [(re.compile(p), why) for p, why in ASK_RULES]
 TMP_ONLY = re.compile(r"^\s*rm\s+-[a-zA-Z]+\s+((?:/tmp/\S+|\$TMPDIR/\S+|/tmp/claude-\S+)\s*)+$")
+# Recursive deletes of regenerable caches only (every target must be a cache dir).
+CACHE_ONLY = re.compile(r"^\s*rm\s+-[a-zA-Z]+\s+((?:[\w./-]*/)?(?:__pycache__|\.pytest_cache|\.mypy_cache|\.ruff_cache)/?\s*)+$")
 
 
 def decide(event):
@@ -53,7 +55,7 @@ def decide(event):
     ti = event.get("tool_input") or {}
     if tool == "Bash":
         cmd = ti.get("command", "")
-        if TMP_ONLY.match(cmd):
+        if TMP_ONLY.match(cmd) or CACHE_ONLY.match(cmd):
             return None
         reasons = [why for pat, why in ASK_RULES if pat.search(cmd)]
         if reasons:
