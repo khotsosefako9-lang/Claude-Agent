@@ -8,3 +8,7 @@
 ## AI / Claude infrastructure (`ai-infra`)
 - **decision** [Select minimal third-party components (no ECC wholesale install)](decisions/2026-10-02-select-minimal-third-party-components-no-ecc-wholesale-insta.md)
 - **decision** [Store the Second Brain in the repo, not ~/.claude](decisions/2026-10-02-store-the-second-brain-in-the-repo-not-claude.md)
+- **learning** [Independent review must be triggered by consequences, not task tier](learnings/2026-10-02-independent-review-must-be-triggered-by-consequences-not-tas.md)
+- **learning** [System tests must not be able to reach the real git remote](learnings/2026-10-02-system-tests-must-not-be-able-to-reach-the-real-git-remote.md)
+- **semantic** [Cloud egress proxy blocks many primary documentation sites (as of 2026-10-02)](semantic/2026-10-02-cloud-egress-proxy-blocks-many-primary-documentation-sites-a.md)
+- **semantic** [wshobson/agents install commands and marketplace plugin count](semantic/2026-10-02-wshobson-agents-install-commands-and-marketplace-plugin-coun.md)
