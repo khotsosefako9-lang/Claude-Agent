@@ -15,6 +15,12 @@ sources, procedures that worked, mistakes with prevention, explicit user prefere
 milestones. **No:** chat transcripts, temporary task state, things derivable from code/git,
 unverified claims, secrets/credentials/personal identifiers of third parties.
 
+**Gate for `semantic` facts from research:** the `reviewer` agent must have checked the cited
+sources first (ACCEPT / ACCEPT WITH NOTES). Facts that were only seen in search snippets, recalled
+from training, or single-sourced are stored only if marked as such in the body (e.g.
+"single-source", "unverified: …"), never as plain fact. Volatile facts (versions, prices) get a
+"as of YYYY-MM-DD" in the title.
+
 ## 2. Classify
 | Type | Use for | Required sections |
 |---|---|---|

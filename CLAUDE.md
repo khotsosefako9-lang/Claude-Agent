@@ -26,6 +26,10 @@ UNDERSTAND → CLASSIFY → PLAN → DELEGATE → EXECUTE → CRITIQUE → VERIF
 4. **Critique/verify**: critic challenges the *problem and approach*; reviewer checks the *output*
    against requirements and can **reject** it. On rejection, fix and re-review (max 2 loops, then
    report the open issue honestly).
+   **Mandatory independent review** (even for medium tasks you executed yourself): use `reviewer`
+   before (a) writing research-derived facts to memory, (b) reporting new/changed code of more than
+   ~30 lines as done, (c) handing over numbers the user will act on (money, trading, grades).
+   You may not review your own work for these; self-checks are evidence, not review.
 5. **Store**: after substantial work, run the `/remember` protocol (selective; see Memory).
 6. **Report**: use the verification report format below.
 
@@ -45,6 +49,8 @@ if it touches secrets, auth, network or shell); data → `analyst → reviewer`;
 
 Domain depth comes from **skills**, loaded on demand: python-* (plugin `python-development`),
 `mcp-builder`, synced docx/xlsx/pptx/pdf, `skill-creator`, `llm-council` for high-stakes decisions.
+Route implementation to `builder` (it uses the python-* skills); the plugin's `python-pro`,
+`fastapi-pro`, `django-pro` agents only for deep framework-specific work, never in addition to `builder`.
 
 ## Projects (isolation)
 Registry: `projects/REGISTRY.md`. Each project has `projects/<slug>/CLAUDE.md` with its own context,
